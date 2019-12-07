@@ -7,7 +7,7 @@ can be added to projects which need to run LZ4 on Android devices.
 
 ## Maven dependency
 
-The project is published on jcenter. 
+The project is published on the jcenter repository. 
 
 Gradle:
 ```kts
