@@ -15,7 +15,7 @@ val lz4Home = projectDir.resolve("lz4/lz4-$lz4Version")
 
 android {
     compileSdkVersion(29)
-    buildToolsVersion("29.0.0")
+    buildToolsVersion("29.0.3")
     defaultConfig {
         minSdkVersion(21)
         targetSdkVersion(29)
@@ -23,8 +23,8 @@ android {
         versionName = "1.0"
         externalNativeBuild {
             cmake {
-                targets += "liblz4"
-                arguments += "-DLZ4_PATH=${lz4Home.absolutePath}/lib/"
+                targets.add("liblz4")
+                arguments.add("-DLZ4_PATH=${lz4Home.absolutePath}/lib/")
             }
         }
     }
