@@ -1,4 +1,5 @@
-[ ![Download](https://api.bintray.com/packages/maryk/maven/lz4-android/images/download.svg) ](https://bintray.com/maryk/maven/lz4-android/_latestVersion)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Download](https://img.shields.io/maven-central/v/io.maryk.lz4/lz4-android)](https://search.maven.org/artifact/io.maryk.lz4/lz4-android)
 
 # LZ4 for android
 
@@ -7,9 +8,9 @@ can be added to projects which need to run LZ4 on Android devices.
 
 ## Maven dependency
 
-The project is published on the jcenter repository. 
+The project is published on Maven Central. 
 
 Gradle:
 ```kts
-implementation("io.maryk.lz4:lz4-android:1.9.2")
+implementation("io.maryk.lz4:lz4-android:1.9.3")
 ```
