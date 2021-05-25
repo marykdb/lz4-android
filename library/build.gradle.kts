@@ -23,7 +23,6 @@ android {
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
-        versionName = "1.0"
         externalNativeBuild {
             cmake {
                 targets.add("liblz4")
