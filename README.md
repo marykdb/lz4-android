@@ -12,5 +12,5 @@ The project is published on Maven Central.
 
 Gradle:
 ```kts
-implementation("io.maryk.lz4:lz4-android:1.9.3")
+implementation("io.maryk.lz4:lz4-android:1.9.3-2")
 ```

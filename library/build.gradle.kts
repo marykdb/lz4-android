@@ -11,18 +11,16 @@ plugins {
 val lz4Version = "1.9.3"
 
 group = "io.maryk.lz4"
-version = lz4Version
+version = "$lz4Version-2"
 
 val lz4Home = projectDir.resolve("lz4/lz4-$lz4Version")
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.3")
+    compileSdk = 30
+    buildToolsVersion = "30.0.3"
     defaultConfig {
-        minSdkVersion(21)
-        targetSdkVersion(30)
-        versionCode = 1
-        versionName = version as String
+        minSdk = 21
+        targetSdk = 30
         externalNativeBuild {
             cmake {
                 targets.add("liblz4")
@@ -109,8 +107,8 @@ afterEvaluate {
             val task = project.tasks.create<Jar>("jar${name.capitalize()}") {
                 dependsOn(variant.javaCompileProvider)
                 dependsOn(variant.externalNativeBuildProviders)
-                from(variant.javaCompileProvider.get().destinationDir)
-                from("${buildDir.absolutePath}/intermediates/library_and_local_jars_jni/$name") {
+                from(variant.javaCompileProvider.get().destinationDirectory)
+                from("${buildDir.absolutePath}/intermediates/library_and_local_jars_jni/$name/jni") {
                     include("**/*.so")
                     into("lib")
                 }
@@ -147,7 +145,7 @@ afterEvaluate {
                     val dependenciesNode = asNode().appendNode("dependencies")
 
                     //Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
-                    configurations.compile.get().allDependencies.forEach {
+                    configurations.implementation.get().allDependencies.forEach {
                         dependenciesNode.appendNode ("dependency").apply {
                             appendNode("groupId", it.group)
                             appendNode("artifactId", it.name)
