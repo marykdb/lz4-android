@@ -11,7 +11,7 @@ plugins {
 val lz4Version = "1.9.3"
 
 group = "io.maryk.lz4"
-version = "$lz4Version-2"
+version = "${lz4Version}-2"
 
 val lz4Home = projectDir.resolve("lz4/lz4-$lz4Version")
 
@@ -138,7 +138,6 @@ afterEvaluate {
                 publishTasks.forEach(::artifact)
                 groupId = groupId
                 artifactId = "lz4-android"
-                version = lz4Version
 
                 //The publication doesn't know about our dependencies, so we have to manually add them to the pom
                 pom.withXml {
