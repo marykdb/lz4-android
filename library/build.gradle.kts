@@ -16,11 +16,11 @@ version = "${lz4Version}-2"
 val lz4Home = projectDir.resolve("lz4/lz4-$lz4Version")
 
 android {
-    compileSdk = 30
+    compileSdk = 31
     buildToolsVersion = "30.0.3"
     defaultConfig {
         minSdk = 21
-        targetSdk = 30
+        targetSdk = 31
         externalNativeBuild {
             cmake {
                 targets.add("liblz4")
