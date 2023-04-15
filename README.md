@@ -18,3 +18,6 @@ implementation("io.maryk.lz4:lz4-android:1.9.4")
 
 ## Documentation
 For more information on how to use LZ4 in your Android app, refer to the official [LZ4 documentation](https://lz4.github.io/lz4/).
+
+## License
+This project is licensed under the Apache License, Version 2.0 - see the [LICENSE file](LICENSE) for details.
