@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.api.tasks.bundling.Jar
 import java.util.*
@@ -16,11 +18,11 @@ version = "${lz4Version}-2"
 val lz4Home = projectDir.resolve("lz4/lz4-$lz4Version")
 
 android {
-    compileSdk = 31
-    buildToolsVersion = "30.0.3"
+    compileSdk = 33
+    buildToolsVersion = "33.0.0"
     defaultConfig {
         minSdk = 21
-        targetSdk = 31
+        targetSdk = 33
         externalNativeBuild {
             cmake {
                 targets.add("liblz4")
