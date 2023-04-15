@@ -10,10 +10,10 @@ plugins {
     id("signing")
 }
 
-val lz4Version = "1.9.3"
+val lz4Version = "1.9.4"
 
 group = "io.maryk.lz4"
-version = "${lz4Version}-2"
+version = lz4Version
 
 val lz4Home = projectDir.resolve("lz4/lz4-$lz4Version")
 

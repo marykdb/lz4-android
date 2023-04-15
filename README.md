@@ -3,14 +3,18 @@
 
 # LZ4 for android
 
-This project exposes a statically compiled library of [LZ4](https://lz4.github.io/lz4/) for the Android platform. These dependencies
-can be added to projects which need to run LZ4 on Android devices.
+LZ4 is a lossless data compression algorithm that is optimized for high compression
+and fast decompression speed. This project exposes a statically compiled library of [LZ4](https://lz4.github.io/lz4/) for 
+the Android platform. These dependencies can be added to projects that need to run LZ4 on Android devices.
 
-## Maven dependency
+## Installation
 
-The project is published on Maven Central. 
+The project is published on Maven Central. To use LZ4 in your Android project, add the following dependency to your Gradle file:
 
 Gradle:
 ```kts
-implementation("io.maryk.lz4:lz4-android:1.9.3-2")
+implementation("io.maryk.lz4:lz4-android:1.9.4")
 ```
+
+## Documentation
+For more information on how to use LZ4 in your Android app, refer to the official [LZ4 documentation](https://lz4.github.io/lz4/).
